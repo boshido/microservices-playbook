@@ -1,7 +1,7 @@
 # Default values for api.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-nameOverride: ingress-route
+nameOverride: external-route-spa-web
 
 ingress:
   enabled: false
@@ -10,13 +10,6 @@ ingress:
     nginx.ingress.kubernetes.io/rewrite-target: "/"
     # kubernetes.io/tls-acme: "true"
   hosts:
-    - host: localhost
-      http:
-        paths:
-          - path: /oms
-            backend:
-              serviceName: oms
-              servicePort: 80
 
   # tls: []
   #  - secretName: chart-example-tls
